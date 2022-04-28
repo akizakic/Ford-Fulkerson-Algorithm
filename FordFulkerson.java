@@ -92,7 +92,7 @@ public class FordFulkerson{
                 int to = i;
                 flowNum = Math.min(flowNum, (capacity[from][to]) - flow[from][to]);
             }
-            // 찾은 경로에 유량을 흘려보내기, 역방향도 반드시!!!!
+            // 찾은 경로에 유량을 흘려보내기, 역방향도 반드시 진행한다.
             for(int i = Sink; i != Source; i = path[i]) {
                 int from = path[i];
                 int to = i;
